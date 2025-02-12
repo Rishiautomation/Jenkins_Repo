@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <parameter name="param1" value="abc@xyz.com"/>
+<parameter name="param2" value="bacw123"/>
+    <classes>
+      <class name="com.simplilearn.TestNGProject.AppTest"/>
+      <class name="Testcases.HomepageTest"/>
+      <class name="Testcases.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
