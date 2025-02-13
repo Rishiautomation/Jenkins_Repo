@@ -7,8 +7,8 @@
     <classes>
       <class name="Testcases.LoginTest">
         <methods>
-          <include name="CloseExcel"/>
           <include name="SetrupDriver"/>
+          <include name="CloseExcel"/>
           <include name="TC05_loginfailureTest"/>
           <include name="TearDown"/>
           <include name="TC01_loginfailureTest"/>

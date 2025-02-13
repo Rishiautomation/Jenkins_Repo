@@ -26,9 +26,10 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void SetrupDriver() {
+		 
 		 WebDriverManager.chromedriver().setup();  
 	        ChromeOptions options = new ChromeOptions();
-	        WebDriver driver = new ChromeDriver(options);
+	        driver = new ChromeDriver(options);
 		driver.get("https://simplilearn.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
