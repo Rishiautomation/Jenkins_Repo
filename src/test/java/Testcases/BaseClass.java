@@ -8,10 +8,13 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	
@@ -23,7 +26,9 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void SetrupDriver() {
-		driver=new ChromeDriver();
+		 WebDriverManager.chromedriver().setup();  
+	        ChromeOptions options = new ChromeOptions();
+	        WebDriver driver = new ChromeDriver(options);
 		driver.get("https://simplilearn.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
