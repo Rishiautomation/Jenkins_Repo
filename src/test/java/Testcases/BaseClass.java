@@ -29,11 +29,12 @@ public class BaseClass {
 		 
 		 WebDriverManager.chromedriver().setup();  
 	        ChromeOptions options = new ChromeOptions();
+	        driver = new ChromeDriver(options);
 	        options.addArguments("--headless=new");  // Run in headless mode
 	        options.addArguments("--no-sandbox");    // Bypass OS security model
 	        options.addArguments("--disable-dev-shm-usage"); // Fix shared memory issues
 	        options.addArguments("--remote-allow-origins=*");
-	        driver = new ChromeDriver(options);
+	        
 		driver.get("https://simplilearn.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
